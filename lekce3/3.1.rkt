@@ -129,3 +129,33 @@
                           out-unit
                           (read-input in-file)))
 |#
+
+
+
+;;; Procvičovací úlohy
+
+;; Napište funkci, která bere za argument momentální stav semaforu ("red" "orange" "green") a vrátí následující.
+(define RED "red")
+(define ORANGE "orange")
+(define GREEN "green")
+
+(define (traffic-light-next state)
+  ...)
+
+
+;; Napište funkci, která převádí kilometry na míle.
+;; Napište batch program (tzn. funkci main), který za argument bude brát vstupní soubor a výstupní soubor
+;; a provede převod kilometry -> míle.
+;; Zkuste využít podmínku if a proveďte (error ...) který vypíše že vstup není číslo.
+
+(define (km->mile ...)
+  ...)
+
+(define (main-km->mile  ...)
+  ...)
+
+
+;; Napište batch program, který nahradí všechna upper-case písmena (velká písmena - A, B, C, D, ...) na vstupu 
+;; lower-case písmeny (malá písmena - a, b, c, d ...)
+(define (main-to-lower in out)
+  ...)
