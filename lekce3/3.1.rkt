@@ -148,10 +148,10 @@
 ;; a provede převod kilometry -> míle.
 ;; Zkuste využít podmínku if a proveďte (error ...) který vypíše že vstup není číslo.
 
-(define (km->mile ...)
+(define (km->mile km)
   ...)
 
-(define (main-km->mile  ...)
+(define (main-km->mile  in out)
   ...)
 
 
