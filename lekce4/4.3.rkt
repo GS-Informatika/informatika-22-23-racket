@@ -31,7 +31,7 @@
 ; Vrátí následující stav smeaforu
 (define (next traffic-light-state)
   (cond [(string=? "red" traffic-light-state) "green"]
-        [(string=? "gree" traffic-light-state) "yellow"]
+        [(string=? "green" traffic-light-state) "yellow"]
         [(string=? "yellow" traffic-light-state) "red"]))
 
 ; Právě jste viděli první příklad ENUMERACE - TrafficLightState je enumerace,
@@ -128,11 +128,12 @@
 ; Jakmile těleso provede 15 oběhů, simulace se zastaví.
 
 ; WorldState je Number mezi:
-; - 0 a REVOLUTIONS1
-; - REVOLUTIONS1 a REVOLUTIONS2
-; - REVOLUTIONS2 a REVOLUTION-END
+; - 0 a 2*pi*REVOLUTIONS1
+; - 2*pi*REVOLUTIONS1 a 2*pi*REVOLUTIONS2
+; - 2*pi*REVOLUTIONS2 a 2*pi*REVOLUTION-END
 ; interpretace: úhel který svírá obíhající těleso s osou x souřadné soustavy,
-; nenabývá vyšší hodnoty než REVOLUTIONS-END a nižší hodnoty jak 0.
+; nenabývá vyšší hodnoty než 2*pi*REVOLUTIONS-END (v rámci reprezentační chyby inexact numbers)
+; a nižší hodnoty jak 0.
 ; Každý násobek 2*PI odpovídá jednomu dokončenému oběhu.
 
 (define WIDTH 160) ; velikosti scény
