@@ -85,10 +85,6 @@
 ;  (make-ball Number Number)
 ; interpretace: Kulička v simulaci, location je momentální poloha, velocity momentální rychlost
 
-; BallOrNumber je jedno z:
-; - Ball
-; - Number
-
 (define WIDTH 100)
 (define HEIGHT 100)
 (define SCENE (empty-scene WIDTH HEIGHT))
