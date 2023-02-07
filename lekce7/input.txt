@@ -1,0 +1,7 @@
+Billy, January 2023
+
+Was poking around the log files of a piece of s**t platform we acquired and are trying to phase out,
+and remarkably it's already being hit with the 2038 problem....in 2023....
+
+For some godforsaken reason it stores a timestamp in mariadb for 15years after the record is created,
+sooooo looks like records weren't stored of that type since the 19th?
