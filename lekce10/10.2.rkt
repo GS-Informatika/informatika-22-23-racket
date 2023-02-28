@@ -59,7 +59,7 @@
 
 ; -------------------------------------------------------------------
 
-;   Stejně jako u dunkcí, i u datových typů můžeme "vnořovat" parametry.
+;   Stejně jako u funkcí, i u datových typů můžeme "vnořovat" parametry.
 
 ;   [List-of [Pair L R]] je zápis takového "vnořeného" parametrického typu.
 ; Dosaďte postupně do definic datových typů a určete, co obsahují hodnoty
@@ -72,7 +72,7 @@
 ;   Nejprve zapíšeme které parametry budeme používat v naší definici,
 ; dále zapíšeme signaturu
 
-; [T] [List-of T] [T -> Boolean] -> T
+; [T] [List-of T] [T -> Boolean] -> [List-of T]
 (define (filterP l P)
   (cond [(empty? l) '()]
         [(P (first l)) (cons (first l) (filterP (rest l) P))]
@@ -90,7 +90,7 @@
 
 ; Další ukázka:
 
-; [T1 T2] [T1 -> T2] [List-of T1] -> T2
+; [T1 T2] [T1 -> T2] [List-of T1] -> [List-of T2]
 (define (mapL f l)
   (cond [(empty? l) '()]
         [else (cons (f (first l)) (mapL f (rest l)))]))
