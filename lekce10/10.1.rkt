@@ -200,3 +200,26 @@
 
 ;   Efektivně jsme povýšili funkce na "first class citizens" (občany první třídy)
 ; Můžeme definovat funkci a následně ji použít jako argument jiné funkce!
+; Funkce jsou HODNOTY (values)
+
+; Rozmyslete: jak vypadá datová definice typu pro funkce?
+
+; Rozmyslete: Co bylo výsledkem následujících výrazů? Doplňte signatury funkcí!
+
+(define (f x) x)
+
+;(f 1)
+;f
+;(f f)
+;(f +)
+
+(define (mapL f l)
+  (cond [(empty? l) '()]
+        [else (cons (f (first l)) (mapL f (rest l)))]))
+
+;(mapL f '(1 2 3 4))
+
+(define (g x) (+ x 4))
+;(mapL g '(1 2 3 4))
+
+
